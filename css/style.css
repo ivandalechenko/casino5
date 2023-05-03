@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500&family=Rajdhani:wght@500;700&family=Yantramanav:wght@400;700&display=swap");
+body {
+  background-color: rgb(187, 188, 245);
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  color: white;
+}
+
+.container {
+  width: 1110px;
+  margin: 0 auto;
+}
+@media (max-width: 1150px) {
+  .container {
+    width: 920px;
+  }
+}
+@media (max-width: 960px) {
+  .container {
+    padding: 0px 15px;
+    width: 100%;
+  }
+}
+
+nav {
+  padding: 28px 0px;
+}
+nav .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+nav .logo {
+  width: 30%;
+}
+@media (max-width: 700px) {
+  nav .logo {
+    text-align: center;
+    width: 100%;
+  }
+}
+nav .logo img {
+  transition: 0.3s;
+}
+nav .logo img:hover {
+  filter: drop-shadow(0px 0px 5px rgb(104, 83, 178));
+}
+nav .enter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  width: 70%;
+}
+@media (max-width: 700px) {
+  nav .enter {
+    padding-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+nav .enter button {
+  border: 3px solid #FFFFFF;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 32px;
+  background-color: transparent;
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  padding: 5px 60px;
+  transition: 0.2s;
+}
+nav .enter button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: rgb(104, 83, 178);
+}
+
+.banner_fone {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+@media (max-width: 1100px) {
+  .banner_fone {
+    display: none;
+  }
+}
+
+.banner_left {
+  width: 0;
+  height: 0;
+  position: relative;
+  left: 1050px;
+  animation: 10s ease-in-out 0s infinite alternate banner_left_anim;
+  filter: drop-shadow(0px 0px 5px rgb(104, 83, 178));
+}
+
+@keyframes banner_left_anim {
+  0% {
+    transform: scale(1);
+    transform: skew(-2deg, -2deg);
+    transform: rotate(0deg);
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(30px, 0px);
+    transform: scale(1.05);
+    transform: skew(0deg, 0deg);
+    transform: rotate(-6deg);
+  }
+  100% {
+    transform: translate(30px, 30px);
+    transform: scale(1.1);
+    transform: skew(2deg, 2deg);
+    transform: rotate(6deg);
+  }
+}
+.banner_right {
+  width: 0;
+  height: 0;
+  position: relative;
+  left: 1350px;
+  animation: 12s ease-in-out 0s infinite alternate banner_right_anim;
+  filter: drop-shadow(0px 0px 5px rgb(104, 83, 178));
+}
+
+.banner_right img, .banner_left img {
+  transition: 0.3s ease-in-out;
+}
+.banner_right img:hover, .banner_left img:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  filter: drop-shadow(0px 0px 5px black);
+}
+
+@keyframes banner_right_anim {
+  0% {
+    transform: scale(1);
+    transform: skew(4deg, 0deg);
+    transform: rotate(0deg);
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, 50px);
+    transform: scale(0.95);
+    transform: skew(2deg, 2deg);
+    transform: rotate(8deg);
+  }
+  100% {
+    transform: translate(30px, 20px);
+    transform: scale(0.9);
+    transform: skew(0deg, 4deg);
+    transform: rotate(-8deg);
+  }
+}
+.usp_banner {
+  margin-top: 40px;
+}
+.usp_banner .container_inner {
+  width: 63%;
+  z-index: 1;
+  position: relative;
+}
+@media (max-width: 950px) {
+  .usp_banner .container_inner {
+    width: 100%;
+  }
+}
+.usp_banner .container_inner h1 {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 86px;
+  line-height: 31px;
+}
+.usp_banner .container_inner h1 .marked {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 86px;
+  line-height: 80px;
+  color: rgb(63, 64, 139);
+}
+@media (max-width: 600px) {
+  .usp_banner .container_inner h1 {
+    font-size: 36px;
+    line-height: 31px;
+  }
+}
+.usp_banner .container_inner h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 59px;
+}
+@media (max-width: 600px) {
+  .usp_banner .container_inner h2 {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+.usp_banner .container_inner p {
+  font-family: "Yantramanav";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #3F408B;
+  width: 70%;
+  margin-top: 10px;
+}
+@media (max-width: 1230px) {
+  .usp_banner .container_inner p {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .usp_banner .container_inner p {
+    font-size: 16px;
+    line-height: 29px;
+  }
+}
+.usp_banner .container_inner .button_and_p18 {
+  display: flex;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+}
+.usp_banner .container_inner .button_and_p18 button {
+  margin-top: 30px;
+  background: none;
+  transition: 0.2s ease-in-out;
+}
+.usp_banner .container_inner .button_and_p18 button svg path {
+  transition: 0.2s ease-in-out;
+}
+.usp_banner .container_inner .button_and_p18 button svg #border_1 {
+  transition: 0.2s ease-in-out;
+}
+.usp_banner .container_inner .button_and_p18 button svg #border_2 {
+  transition: 0.2s 0.1s ease-in-out;
+}
+.usp_banner .container_inner .button_and_p18 button svg #border_3 {
+  transition: 0.2s 0.2s ease-in-out;
+}
+.usp_banner .container_inner .button_and_p18 button svg #border_4 {
+  transition: 0.2s 0.3s ease-in-out;
+}
+.usp_banner .container_inner .button_and_p18 button svg #letter_p {
+  transition: 0.2s ease-in-out;
+}
+.usp_banner .container_inner .button_and_p18 button svg #letter_l {
+  transition: 0.2s 0.1s ease-in-out;
+}
+.usp_banner .container_inner .button_and_p18 button svg #letter_a {
+  transition: 0.2s 0.2s ease-in-out;
+}
+.usp_banner .container_inner .button_and_p18 button svg #letter_y {
+  transition: 0.2s 0.3s ease-in-out;
+}
+.usp_banner .container_inner .button_and_p18 button svg #round {
+  transition: 0.5s ease-in-out;
+}
+.usp_banner .container_inner .button_and_p18 button svg #play_in_round {
+  transition: 0.5s ease-in-out;
+}
+.usp_banner .container_inner .button_and_p18 button svg #fone {
+  transition: 0.5s ease-in-out;
+}
+.usp_banner .container_inner .button_and_p18 button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.usp_banner .container_inner .button_and_p18 button:hover svg #border_1 {
+  fill: #3F408B;
+}
+.usp_banner .container_inner .button_and_p18 button:hover svg #border_2 {
+  fill: #3F408B;
+}
+.usp_banner .container_inner .button_and_p18 button:hover svg #border_3 {
+  fill: #3F408B;
+}
+.usp_banner .container_inner .button_and_p18 button:hover svg #border_4 {
+  fill: #3F408B;
+}
+.usp_banner .container_inner .button_and_p18 button:hover svg #letter_p {
+  fill: #3F408B;
+}
+.usp_banner .container_inner .button_and_p18 button:hover svg #letter_l {
+  fill: #3F408B;
+}
+.usp_banner .container_inner .button_and_p18 button:hover svg #letter_a {
+  fill: #3F408B;
+}
+.usp_banner .container_inner .button_and_p18 button:hover svg #letter_y {
+  fill: #3F408B;
+}
+.usp_banner .container_inner .button_and_p18 button:hover svg #round {
+  fill: #3F408B;
+}
+.usp_banner .container_inner .button_and_p18 button:hover svg #play_in_round {
+  fill: #e2e2ff;
+}
+.usp_banner .container_inner .button_and_p18 button:hover svg #fone {
+  fill: #dbdcff;
+}
+.usp_banner .container_inner .button_and_p18 .p18 {
+  margin-top: 20px;
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.usp_banner .container_inner .button_and_p18 .p18 img {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+}
+.usp_banner .container_inner .button_and_p18 .p18 p {
+  margin: 0;
+  width: auto;
+  margin: auto 0px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.information {
+  margin-top: 50px;
+  padding: 50px 0px;
+  background-color: rgb(128, 115, 208);
+}
+.information p {
+  font-family: "Yantramanav";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.adv {
+  background-image: url(../images/adv_games_fone.png);
+  background-size: cover;
+  padding-bottom: 600px;
+}

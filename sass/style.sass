@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@500&family=Rajdhani:wght@500;700&family=Yantramanav:wght@400;700&display=swap')
+
+body
+    background-color: rgba(187, 188, 245, 1)
+    line-height: 1
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section
+    display: block
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button
+    margin: 0
+    padding: 0
+    border: 0
+    font-size: 100%
+    font: inherit
+    vertical-align: baseline
+    box-sizing: border-box
+    color: white
+
+.container
+    width: 1110px
+    margin: 0 auto
+    @media (max-width: 1150px)
+        width: 920px
+    @media (max-width: 960px)
+        padding: 0px 15px
+        width: 100%
+
+nav
+    padding: 28px 0px
+    .container
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    .logo
+        width: 30%
+        @media (max-width: 700px)
+            text-align: center
+            width: 100%
+
+        img
+            transition: .3s
+        img:hover
+            filter: drop-shadow(0px 0px 5px rgba(104, 83, 178, 1) )
+
+    .enter
+        display: flex
+        flex-wrap: wrap
+        justify-content: right
+        column-gap: 32px
+        width: 70%
+        @media (max-width: 700px)
+            padding-top: 20px
+            width: 100%
+            justify-content: center
+        button
+            border: 3px solid #FFFFFF
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+            border-radius: 32px
+            background-color: transparent
+            font-family: 'Rajdhani'
+            font-style: normal
+            font-weight: 700
+            font-size: 24px
+            line-height: 31px
+            padding: 5px 60px
+            transition: .2s
+        button:hover
+            cursor: pointer
+            background-color: white
+            color: rgba(104, 83, 178, 1)
+
+.banner_fone
+    position: absolute
+    top: 0
+    right: 0
+    z-index: -1
+    @media (max-width: 1100px)
+        display: none
+
+.banner_left
+    width: 0
+    height: 0
+    position: relative
+    left: 1050px
+    animation: 10s ease-in-out 0s infinite alternate banner_left_anim
+    filter: drop-shadow(0px 0px 5px rgba(104, 83, 178, 1) )
+@keyframes banner_left_anim
+    0%
+        transform: scale(1)
+        transform: skew(-2deg, -2deg)
+        transform: rotate(0deg)
+        transform: translate(0px, 0px)
+    50%
+        transform: translate(30px, 0px)
+        transform: scale(1.05)
+        transform: skew(0deg, 0deg)
+        transform: rotate(-6deg)
+    100%
+        transform: translate(30px, 30px)
+        transform: scale(1.1)
+        transform: skew(2deg, 2deg)
+        transform: rotate(6deg)
+
+.banner_right
+    width: 0
+    height: 0
+    position: relative
+    left: 1350px
+    animation: 12s ease-in-out 0s infinite alternate banner_right_anim
+    filter: drop-shadow(0px 0px 5px rgba(104, 83, 178, 1) )
+
+.banner_right, .banner_left
+    img
+        transition: .3s ease-in-out
+    img:hover
+        cursor: pointer
+        transform: scale(1.05)
+        filter: drop-shadow(0px 0px 5px black)
+
+@keyframes banner_right_anim
+    0%
+        transform: scale(1)
+        transform: skew(4deg, 0deg)
+        transform: rotate(0deg)
+        transform: translate(0px, 0px)
+    50%
+        transform: translate(0px, 50px)
+        transform: scale(.95)
+        transform: skew(2deg, 2deg)
+        transform: rotate(8deg)
+    100%
+        transform: translate(30px, 20px)
+        transform: scale(.9)
+        transform: skew(0deg, 4deg)
+        transform: rotate(-8deg)
+
+.usp_banner
+    margin-top: 40px
+
+    .container_inner
+        width: 63%
+        z-index: 1
+        position: relative
+        @media (max-width: 950px)
+            width: 100%
+
+        h1
+            font-family: 'Rajdhani'
+            font-style: normal
+            font-weight: 700
+            font-size: 86px
+            line-height: 31px
+            .marked
+                font-family: 'Rajdhani'
+                font-style: normal
+                font-weight: 700
+                font-size: 86px
+                line-height: 80px
+                color: rgba(63, 64, 139, 1)
+            @media (max-width: 600px)
+                font-size: 36px
+                line-height: 31px
+
+        h2
+            font-family: 'Montserrat'
+            font-style: normal
+            font-weight: 500
+            font-size: 48px
+            line-height: 59px
+            @media (max-width: 600px)
+                margin-top: 10px
+                font-size: 16px
+                line-height: 16px
+        p
+            font-family: 'Yantramanav'
+            font-style: normal
+            font-weight: 400
+            font-size: 24px
+            line-height: 29px
+            color: #3F408B
+            width: 70%
+            margin-top: 10px
+            @media (max-width: 1230px)
+                width: 100%
+            @media (max-width: 600px)
+                font-size: 16px
+                line-height: 29px
+        .button_and_p18
+            display: flex
+            column-gap: 50px
+            button
+                margin-top: 30px
+                background: none
+                transition: .2s ease-in-out
+                svg
+                    path
+                        transition: .2s ease-in-out
+                    #border_1
+                        transition: .2s ease-in-out
+                    #border_2
+                        transition: .2s .1s ease-in-out
+                    #border_3
+                        transition: .2s .2s ease-in-out
+                    #border_4
+                        transition: .2s .3s ease-in-out
+                    #letter_p
+                        transition: .2s ease-in-out
+                    #letter_l
+                        transition: .2s .1s ease-in-out
+                    #letter_a
+                        transition: .2s .2s ease-in-out
+                    #letter_y
+                        transition: .2s .3s ease-in-out
+                    #round
+                        transition: .5s ease-in-out
+                    #play_in_round
+                        transition: .5s ease-in-out
+                    #fone
+                        transition: .5s ease-in-out
+            button:hover
+                cursor: pointer
+                transform: scale(1.05)
+                svg
+                    #border_1
+                        fill: #3F408B
+                    #border_2
+                        fill: #3F408B
+                    #border_3
+                        fill: #3F408B
+                    #border_4
+                        fill: #3F408B
+                    #letter_p
+                        fill: #3F408B
+                    #letter_l
+                        fill: #3F408B
+                    #letter_a
+                        fill: #3F408B
+                    #letter_y
+                        fill: #3F408B
+                    #round
+                        fill: #3F408B
+                    #play_in_round
+                        fill: #e2e2ff
+                    #fone
+                        fill: #dbdcff
+            .p18
+                margin-top: 20px
+                display: flex
+                column-gap: 20px
+                img
+                    width: 40px
+                    height: 40px
+                    margin: auto
+                p
+                    margin: 0
+                    width: auto
+                    margin: auto 0px
+                    font-family: 'Inter'
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 15px
+                    line-height: 20px
+                    color: rgba(255, 255, 255, 0.5)
+
+.information
+    margin-top: 50px
+    padding: 50px 0px
+    background-color: rgba(128, 115, 208, 1)
+    p
+        font-family: 'Yantramanav'
+        font-style: normal
+        font-weight: 400
+        font-size: 24px
+        line-height: 32px
+
+.adv
+    background-image: url(../images/adv_games_fone.png)
+    background-size: cover
+    padding-bottom: 600px
