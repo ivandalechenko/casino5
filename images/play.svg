@@ -88,6 +88,9 @@
                                 #btn:hover #fone {
                                     fill: #dbdcff;
                                 }
+                                #btn:hover {
+                                    cursor: pointer;
+                                }
                             </style>
                             <g id="btn" clip-path="url(#clip0_13_591)">
                                 <path id="shadow"

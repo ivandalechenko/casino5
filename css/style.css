@@ -99,6 +99,14 @@ nav .enter button {
   padding: 5px 60px;
   transition: 0.2s;
 }
+@media (max-width: 700px) {
+  nav .enter button {
+    background: rgba(63, 64, 139, 0.43);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+  }
+}
 nav .enter button:hover {
   cursor: pointer;
   background-color: white;
@@ -122,8 +130,40 @@ nav .enter button:hover {
   height: 0;
   position: relative;
   left: 1050px;
-  animation: 10s ease-in-out 0s infinite alternate banner_left_anim;
+  animation: 9s ease-in-out 0s infinite alternate banner_left_anim;
   filter: drop-shadow(0px 0px 5px rgb(104, 83, 178));
+}
+@media (max-width: 1650px) {
+  .banner_left {
+    left: 900px;
+  }
+}
+@media (max-width: 1500px) {
+  .banner_left {
+    left: 700px;
+  }
+}
+@media (max-width: 1100px) {
+  .banner_left {
+    left: 100px;
+    z-index: -1;
+  }
+}
+@media (max-width: 800px) {
+  .banner_left {
+    left: 0px;
+    top: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .banner_left {
+    left: -100px;
+  }
+}
+@media (max-width: 400px) {
+  .banner_left {
+    left: -150px;
+  }
 }
 
 @keyframes banner_left_anim {
@@ -154,14 +194,52 @@ nav .enter button:hover {
   animation: 12s ease-in-out 0s infinite alternate banner_right_anim;
   filter: drop-shadow(0px 0px 5px rgb(104, 83, 178));
 }
-
-.banner_right img, .banner_left img {
-  transition: 0.3s ease-in-out;
+@media (max-width: 1650px) {
+  .banner_right {
+    left: 1200px;
+  }
 }
-.banner_right img:hover, .banner_left img:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-  filter: drop-shadow(0px 0px 5px black);
+@media (max-width: 1500px) {
+  .banner_right {
+    left: 1000px;
+  }
+}
+@media (max-width: 1300px) {
+  .banner_right {
+    display: none;
+  }
+}
+@media (max-width: 1100px) {
+  .banner_right {
+    display: block;
+    left: 500px;
+    z-index: -1;
+  }
+}
+@media (max-width: 800px) {
+  .banner_right {
+    left: 400px;
+  }
+}
+@media (max-width: 700px) {
+  .banner_right {
+    left: 300px;
+  }
+}
+@media (max-width: 600px) {
+  .banner_right img {
+    width: 150px;
+  }
+}
+@media (max-width: 500px) {
+  .banner_right {
+    left: 200px;
+  }
+}
+@media (max-width: 400px) {
+  .banner_right {
+    left: 120px;
+  }
 }
 
 @keyframes banner_right_anim {
@@ -184,84 +262,22 @@ nav .enter button:hover {
     transform: rotate(-8deg);
   }
 }
+.adv_image {
+  filter: drop-shadow(0px 0px 5px rgb(104, 83, 178));
+}
+
 .play {
   margin-top: 30px;
   background: none;
   transition: 0.2s ease-in-out;
 }
-.play svg path {
-  transition: 0.2s ease-in-out;
-}
-.play svg #border_1 {
-  transition: 0.2s ease-in-out;
-}
-.play svg #border_2 {
-  transition: 0.2s 0.1s ease-in-out;
-}
-.play svg #border_3 {
-  transition: 0.2s 0.2s ease-in-out;
-}
-.play svg #border_4 {
-  transition: 0.2s 0.3s ease-in-out;
-}
-.play svg #letter_p {
-  transition: 0.2s ease-in-out;
-}
-.play svg #letter_l {
-  transition: 0.2s 0.1s ease-in-out;
-}
-.play svg #letter_a {
-  transition: 0.2s 0.2s ease-in-out;
-}
-.play svg #letter_y {
-  transition: 0.2s 0.3s ease-in-out;
-}
-.play svg #round {
-  transition: 0.5s ease-in-out;
-}
-.play svg #play_in_round {
-  transition: 0.5s ease-in-out;
-}
-.play svg #fone {
-  transition: 0.5s ease-in-out;
-}
 
 .play:hover {
-  cursor: pointer;
   transform: scale(1.05);
+  cursor: pointer;
 }
-.play:hover svg #border_1 {
-  fill: #3F408B;
-}
-.play:hover svg #border_2 {
-  fill: #3F408B;
-}
-.play:hover svg #border_3 {
-  fill: #3F408B;
-}
-.play:hover svg #border_4 {
-  fill: #3F408B;
-}
-.play:hover svg #letter_p {
-  fill: #3F408B;
-}
-.play:hover svg #letter_l {
-  fill: #3F408B;
-}
-.play:hover svg #letter_a {
-  fill: #3F408B;
-}
-.play:hover svg #letter_y {
-  fill: #3F408B;
-}
-.play:hover svg #round {
-  fill: #3F408B;
-}
-.play:hover svg #play_in_round {
-  fill: #e2e2ff;
-}
-.play:hover svg #fone {
-  fill: #dbdcff;
+.play:hover object {
+  cursor: pointer;
 }
 
 .usp_banner {
@@ -272,9 +288,14 @@ nav .enter button:hover {
   z-index: 1;
   position: relative;
 }
-@media (max-width: 950px) {
+@media (max-width: 1230px) {
   .usp_banner .container_inner {
+    background: rgba(128, 115, 208, 0.77);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
+    padding: 30px;
     width: 100%;
+    border-radius: 20px;
   }
 }
 .usp_banner .container_inner h1 {
@@ -284,6 +305,12 @@ nav .enter button:hover {
   font-size: 86px;
   line-height: 31px;
 }
+@media (max-width: 750px) {
+  .usp_banner .container_inner h1 {
+    font-size: 36px;
+    line-height: 31px;
+  }
+}
 .usp_banner .container_inner h1 .marked {
   font-family: "Rajdhani";
   font-style: normal;
@@ -292,8 +319,8 @@ nav .enter button:hover {
   line-height: 80px;
   color: rgb(63, 64, 139);
 }
-@media (max-width: 600px) {
-  .usp_banner .container_inner h1 {
+@media (max-width: 750px) {
+  .usp_banner .container_inner h1 .marked {
     font-size: 36px;
     line-height: 31px;
   }
@@ -305,7 +332,7 @@ nav .enter button:hover {
   font-size: 48px;
   line-height: 59px;
 }
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   .usp_banner .container_inner h2 {
     margin-top: 10px;
     font-size: 16px;
@@ -325,33 +352,45 @@ nav .enter button:hover {
 @media (max-width: 1230px) {
   .usp_banner .container_inner p {
     width: 100%;
+    color: white;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 750px) {
   .usp_banner .container_inner p {
     font-size: 16px;
     line-height: 29px;
   }
 }
-.usp_banner .container_inner .button_and_p18 {
+.usp_banner .button_and_p18 {
   display: flex;
   -moz-column-gap: 50px;
        column-gap: 50px;
+  flex-wrap: wrap;
 }
-.usp_banner .container_inner .button_and_p18 .p18 {
+@media (max-width: 700px) {
+  .usp_banner .button_and_p18 {
+    justify-content: center;
+  }
+}
+.usp_banner .button_and_p18 .p18 {
   margin-top: 20px;
   display: flex;
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
-.usp_banner .container_inner .button_and_p18 .p18 img {
+@media (max-width: 700px) {
+  .usp_banner .button_and_p18 .p18 {
+    justify-content: center;
+    width: 100%;
+  }
+}
+.usp_banner .button_and_p18 .p18 img {
   width: 40px;
   height: 40px;
-  margin: auto;
+  margin: auto 0;
 }
-.usp_banner .container_inner .button_and_p18 .p18 p {
+.usp_banner .button_and_p18 .p18 p {
   margin: 0;
-  width: auto;
   margin: auto 0px;
   font-family: "Inter";
   font-style: normal;
@@ -367,12 +406,30 @@ nav .enter button:hover {
   background-color: rgb(128, 115, 208);
 }
 .information p {
-  text-aligh: center;
+  text-align: center;
   font-family: "Yantramanav";
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
+}
+
+#adv_btn_small {
+  display: none;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+@media (max-width: 800px) {
+  #adv_btn_small {
+    display: block;
+  }
+}
+
+@media (max-width: 800px) {
+  #adv_btn_large {
+    display: none;
+  }
 }
 
 .adv {
@@ -387,6 +444,7 @@ nav .enter button:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  row-gap: 30px;
 }
 .adv .container img {
   margin: 0px auto;
@@ -396,6 +454,11 @@ nav .enter button:hover {
   width: 32%;
   text-align: center;
   margin-top: auto;
+}
+@media (max-width: 800px) {
+  .adv .container .adv_element_wrapper {
+    width: 100%;
+  }
 }
 .adv .container .adv_element_wrapper .adv_element {
   padding: 30px;
@@ -421,11 +484,31 @@ nav .enter button:hover {
   font-size: 14px;
   line-height: 17px;
 }
+@media (max-width: 600px) {
+  .adv .container .adv_image {
+    width: 400px;
+  }
+}
+@media (max-width: 450px) {
+  .adv .container .adv_image {
+    width: 300px;
+  }
+}
+@media (max-width: 360px) {
+  .adv .container .adv_image {
+    width: 260px;
+  }
+}
 
 footer nav {
   padding: 30px 0px;
   background-color: rgb(128, 115, 208);
   margin-bottom: 30px;
+}
+@media (max-width: 700px) {
+  footer .container {
+    justify-content: center;
+  }
 }
 footer .links {
   margin: auto 0px;
@@ -433,6 +516,11 @@ footer .links {
   row-gap: 20px;
   -moz-column-gap: 30px;
        column-gap: 30px;
+}
+@media (max-width: 700px) {
+  footer .links {
+    margin-top: 25px;
+  }
 }
 footer .links a {
   text-decoration: none;
@@ -455,6 +543,11 @@ footer p {
   color: rgb(63, 64, 139);
   padding: 10px 50px;
   text-align: center;
+}
+@media (max-width: 700px) {
+  footer p {
+    padding: 10px 15px;
+  }
 }
 footer .p18 {
   padding: 40px 0px;

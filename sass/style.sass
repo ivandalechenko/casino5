@@ -78,6 +78,10 @@ nav
             line-height: 31px
             padding: 5px 60px
             transition: .2s
+            @media (max-width: 700px)
+                background: rgba(63, 64, 139, 0.43)
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                backdrop-filter: blur(2px)
         button:hover
             cursor: pointer
             background-color: white
@@ -96,8 +100,23 @@ nav
     height: 0
     position: relative
     left: 1050px
-    animation: 10s ease-in-out 0s infinite alternate banner_left_anim
+    animation: 9s ease-in-out 0s infinite alternate banner_left_anim
     filter: drop-shadow(0px 0px 5px rgba(104, 83, 178, 1) )
+    @media (max-width: 1650px)
+        left: 900px
+    @media (max-width: 1500px)
+        left: 700px
+    @media (max-width: 1100px)
+        left: 100px
+        z-index: -1
+    @media (max-width: 800px)
+        left: 0px
+        top: 0px
+    @media (max-width: 500px)
+        left: -100px
+    @media (max-width: 400px)
+        left: -150px
+
 @keyframes banner_left_anim
     0%
         transform: scale(1)
@@ -122,14 +141,28 @@ nav
     left: 1350px
     animation: 12s ease-in-out 0s infinite alternate banner_right_anim
     filter: drop-shadow(0px 0px 5px rgba(104, 83, 178, 1) )
+    @media (max-width: 1650px)
+        left: 1200px
+    @media (max-width: 1500px)
+        left: 1000px
+    @media (max-width: 1300px)
+        display: none
+    @media (max-width: 1100px)
+        display: block
+        left: 500px
+        z-index: -1
+    @media (max-width: 800px)
+        left: 400px
+    @media (max-width: 700px)
+        left: 300px
+    @media (max-width: 600px)
+        img
+            width: 150px
+    @media (max-width: 500px)
+        left: 200px
 
-.banner_right, .banner_left
-    img
-        transition: .3s ease-in-out
-    img:hover
-        cursor: pointer
-        transform: scale(1.05)
-        filter: drop-shadow(0px 0px 5px black)
+    @media (max-width: 400px)
+        left: 120px
 
 @keyframes banner_right_anim
     0%
@@ -148,61 +181,19 @@ nav
         transform: skew(0deg, 4deg)
         transform: rotate(-8deg)
 
+.adv_image
+    filter: drop-shadow(0px 0px 5px rgba(104, 83, 178, 1) )
+
 .play
     margin-top: 30px
     background: none
     transition: .2s ease-in-out
-    svg
-        path
-            transition: .2s ease-in-out
-        #border_1
-            transition: .2s ease-in-out
-        #border_2
-            transition: .2s .1s ease-in-out
-        #border_3
-            transition: .2s .2s ease-in-out
-        #border_4
-            transition: .2s .3s ease-in-out
-        #letter_p
-            transition: .2s ease-in-out
-        #letter_l
-            transition: .2s .1s ease-in-out
-        #letter_a
-            transition: .2s .2s ease-in-out
-        #letter_y
-            transition: .2s .3s ease-in-out
-        #round
-            transition: .5s ease-in-out
-        #play_in_round
-            transition: .5s ease-in-out
-        #fone
-            transition: .5s ease-in-out
+
 .play:hover
-    cursor: pointer
     transform: scale(1.05)
-    svg
-        #border_1
-            fill: #3F408B
-        #border_2
-            fill: #3F408B
-        #border_3
-            fill: #3F408B
-        #border_4
-            fill: #3F408B
-        #letter_p
-            fill: #3F408B
-        #letter_l
-            fill: #3F408B
-        #letter_a
-            fill: #3F408B
-        #letter_y
-            fill: #3F408B
-        #round
-            fill: #3F408B
-        #play_in_round
-            fill: #e2e2ff
-        #fone
-            fill: #dbdcff
+    cursor: pointer
+    object
+        cursor: pointer
 
 .usp_banner
     margin-top: 40px
@@ -211,15 +202,22 @@ nav
         width: 63%
         z-index: 1
         position: relative
-        @media (max-width: 950px)
+        @media (max-width: 1230px)
+            background: rgba(128, 115, 208, 0.77)
+            backdrop-filter: blur(2px)
+            padding: 30px
             width: 100%
-
+            border-radius: 20px
         h1
             font-family: 'Rajdhani'
             font-style: normal
             font-weight: 700
             font-size: 86px
             line-height: 31px
+
+            @media (max-width: 750px)
+                font-size: 36px
+                line-height: 31px
             .marked
                 font-family: 'Rajdhani'
                 font-style: normal
@@ -227,9 +225,9 @@ nav
                 font-size: 86px
                 line-height: 80px
                 color: rgba(63, 64, 139, 1)
-            @media (max-width: 600px)
-                font-size: 36px
-                line-height: 31px
+                @media (max-width: 750px)
+                    font-size: 36px
+                    line-height: 31px
 
         h2
             font-family: 'Montserrat'
@@ -237,7 +235,8 @@ nav
             font-weight: 500
             font-size: 48px
             line-height: 59px
-            @media (max-width: 600px)
+
+            @media (max-width: 750px)
                 margin-top: 10px
                 font-size: 16px
                 line-height: 16px
@@ -252,43 +251,60 @@ nav
             margin-top: 10px
             @media (max-width: 1230px)
                 width: 100%
-            @media (max-width: 600px)
+                color: white
+            @media (max-width: 750px)
                 font-size: 16px
                 line-height: 29px
-        .button_and_p18
-            display: flex
-            column-gap: 50px
+    .button_and_p18
+        display: flex
+        column-gap: 50px
+        flex-wrap: wrap
 
-            .p18
-                margin-top: 20px
-                display: flex
-                column-gap: 20px
-                img
-                    width: 40px
-                    height: 40px
-                    margin: auto
-                p
-                    margin: 0
-                    width: auto
-                    margin: auto 0px
-                    font-family: 'Inter'
-                    font-style: normal
-                    font-weight: 400
-                    font-size: 15px
-                    line-height: 20px
-                    color: rgba(255, 255, 255, 0.5)
+        @media (max-width: 700px)
+            justify-content: center
+        .p18
+            margin-top: 20px
+            display: flex
+            column-gap: 20px
+            @media (max-width: 700px)
+                justify-content: center
+                width: 100%
+            img
+                width: 40px
+                height: 40px
+                margin: auto 0
+            p
+                margin: 0
+                margin: auto 0px
+                font-family: 'Inter'
+                font-style: normal
+                font-weight: 400
+                font-size: 15px
+                line-height: 20px
+                color: rgba(255, 255, 255, 0.5)
 
 .information
     margin-top: 50px
     padding: 50px 0px
     background-color: rgba(128, 115, 208, 1)
     p
-        text-aligh: center
+        text-align: center
         font-family: 'Yantramanav'
         font-style: normal
         font-weight: 400
         font-size: 24px
         line-height: 32px
+
+#adv_btn_small
+    display: none
+    width: 90%
+    margin: 0 auto
+    margin-top: 30px
+    @media (max-width: 800px)
+        display: block
+#adv_btn_large
+    @media (max-width: 800px)
+        display: none
 
 .adv
     background-image: url(../images/advgamesfone.png)
@@ -301,6 +317,7 @@ nav
         display: flex
         flex-wrap: wrap
         justify-content: space-between
+        row-gap: 30px
         img
             margin: 0px auto
             margin-top: 30px
@@ -308,6 +325,9 @@ nav
             width: 32%
             text-align: center
             margin-top: auto
+            @media (max-width: 800px)
+                width: 100%
+
             .adv_element
                 padding: 30px
                 border: 4px solid rgba(187, 188, 245, 1)
@@ -329,17 +349,28 @@ nav
                     font-weight: 400
                     font-size: 14px
                     line-height: 17px
-
+        .adv_image
+            @media (max-width: 600px)
+                width: 400px
+            @media (max-width: 450px)
+                width: 300px
+            @media (max-width: 360px)
+                width: 260px
 footer
     nav
         padding: 30px 0px
         background-color: rgba(128, 115, 208, 1)
         margin-bottom: 30px
+    .container
+        @media (max-width: 700px)
+            justify-content: center
     .links
         margin: auto 0px
         display: flex
         row-gap: 20px
         column-gap: 30px
+        @media (max-width: 700px)
+            margin-top: 25px
         a
             text-decoration: none
             font-family: 'Yantramanav'
@@ -360,6 +391,8 @@ footer
         color: rgba(63, 64, 139, 1)
         padding: 10px 50px
         text-align: center
+        @media (max-width: 700px)
+            padding: 10px 15px
     .p18
         padding: 40px 0px
         display: flex
