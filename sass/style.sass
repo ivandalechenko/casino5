@@ -38,6 +38,8 @@ time, mark, audio, video, button
     @media (max-width: 960px)
         padding: 0px 15px
         width: 100%
+.dnone
+    display: none
 
 nav
     padding: 28px 0px
@@ -45,6 +47,89 @@ nav
         display: flex
         flex-wrap: wrap
         justify-content: space-between
+    .enter_form_wrapper
+        width: 0px
+        height: 0px
+        position: relative
+        left: 55%
+        top: 20px
+        z-index: 2
+        @media (max-width: 1100px)
+            left: 40%
+        @media (max-width: 800px)
+            left: 30%
+        @media (max-width: 700px)
+            left: 0%
+            width: 100%
+            padding: 0px 10px
+
+        .enter_form
+            width: 460px
+            background: rgba(255, 255, 255, 0.88)
+            backdrop-filter: blur(2px)
+            border-radius: 10px
+            padding: 20px
+            @media (max-width: 700px)
+                width: 100%
+            label:not(:first-child)
+                margin-top: 20px
+            label
+                display: block
+                font-family: 'Rajdhani'
+                font-style: normal
+                font-weight: 700
+                font-size: 24px
+                line-height: 31px
+                color: #6853B2
+            input
+                margin-top: 10px
+                background: none
+                border: 3px solid rgba(104, 83, 178, 1)
+                border-radius: 10px
+                width: 100%
+                box-sizing: border-box
+                padding: 10px
+                outline: none
+                font-family: 'Rajdhani'
+                font-style: normal
+                font-weight: 700
+                font-size: 24px
+                color: #6853B2
+                transition: .2s
+            input:focus
+                background-color: rgba(104, 83, 178, 1)
+                color: white
+            button
+                font-family: 'Rajdhani'
+                font-style: normal
+                font-weight: 700
+                font-size: 24px
+                line-height: 31px
+                color: #6853B2
+                width: 100%
+                margin-top: 30px
+                padding: 5px
+                border: 3px solid #6853B2
+                border-radius: 11px
+                margin-bottom: 20px
+                transition: .2s
+            button:hover
+                background-color: rgba(104, 83, 178, 1)
+                color: white
+                cursor: pointer
+
+            a
+                text-decoration: none
+                display: block
+                font-family: 'Rajdhani'
+                font-style: normal
+                font-weight: 500
+                font-size: 20px
+                line-height: 31px
+                color: #6853B2
+                transition: .2s
+            a:hover
+                opacity: .6
     .logo
         width: 30%
         @media (max-width: 700px)
@@ -106,6 +191,8 @@ nav
         left: 900px
     @media (max-width: 1500px)
         left: 700px
+    @media (max-width: 1200px)
+        left: 600px
     @media (max-width: 1100px)
         left: 100px
         z-index: -1
@@ -401,3 +488,45 @@ footer
         p
             padding: 0px
             margin: auto 0
+
+.games
+    background-image: url(../images/advgamesfoneR.png)
+    background-size: 105%
+    background-position: bottom
+    background-repeat: no-repeat
+    margin-top: 60px
+    .container
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+        column-gap: 20px
+        .game_element
+            width: 255px
+            object
+                width: 100%
+            .img
+                width: 0px
+                height: 0px
+                position: relative
+                top: 12px
+                left: 11px
+                img
+                    object-fit: cover
+                    width: 233px
+                    height: 325px
+                    border-radius: 10px
+            button
+                position: relative
+                top: -110px
+                width: 100%
+                margin: 0 auto
+                object
+                    width: 150px
+        .adv_image
+            margin: auto
+            @media (max-width: 600px)
+                width: 400px
+            @media (max-width: 450px)
+                width: 300px
+            @media (max-width: 360px)
+                width: 260px

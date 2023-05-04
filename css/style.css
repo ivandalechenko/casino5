@@ -48,6 +48,10 @@ time, mark, audio, video, button {
   }
 }
 
+.dnone {
+  display: none;
+}
+
 nav {
   padding: 28px 0px;
 }
@@ -55,6 +59,110 @@ nav .container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+nav .enter_form_wrapper {
+  width: 0px;
+  height: 0px;
+  position: relative;
+  left: 55%;
+  top: 20px;
+  z-index: 2;
+}
+@media (max-width: 1100px) {
+  nav .enter_form_wrapper {
+    left: 40%;
+  }
+}
+@media (max-width: 800px) {
+  nav .enter_form_wrapper {
+    left: 30%;
+  }
+}
+@media (max-width: 700px) {
+  nav .enter_form_wrapper {
+    left: 0%;
+    width: 100%;
+    padding: 0px 10px;
+  }
+}
+nav .enter_form_wrapper .enter_form {
+  width: 460px;
+  background: rgba(255, 255, 255, 0.88);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  border-radius: 10px;
+  padding: 20px;
+}
+@media (max-width: 700px) {
+  nav .enter_form_wrapper .enter_form {
+    width: 100%;
+  }
+}
+nav .enter_form_wrapper .enter_form label:not(:first-child) {
+  margin-top: 20px;
+}
+nav .enter_form_wrapper .enter_form label {
+  display: block;
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  color: #6853B2;
+}
+nav .enter_form_wrapper .enter_form input {
+  margin-top: 10px;
+  background: none;
+  border: 3px solid rgb(104, 83, 178);
+  border-radius: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  outline: none;
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  color: #6853B2;
+  transition: 0.2s;
+}
+nav .enter_form_wrapper .enter_form input:focus {
+  background-color: rgb(104, 83, 178);
+  color: white;
+}
+nav .enter_form_wrapper .enter_form button {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  color: #6853B2;
+  width: 100%;
+  margin-top: 30px;
+  padding: 5px;
+  border: 3px solid #6853B2;
+  border-radius: 11px;
+  margin-bottom: 20px;
+  transition: 0.2s;
+}
+nav .enter_form_wrapper .enter_form button:hover {
+  background-color: rgb(104, 83, 178);
+  color: white;
+  cursor: pointer;
+}
+nav .enter_form_wrapper .enter_form a {
+  text-decoration: none;
+  display: block;
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 31px;
+  color: #6853B2;
+  transition: 0.2s;
+}
+nav .enter_form_wrapper .enter_form a:hover {
+  opacity: 0.6;
 }
 nav .logo {
   width: 30%;
@@ -141,6 +249,11 @@ nav .enter button:hover {
 @media (max-width: 1500px) {
   .banner_left {
     left: 700px;
+  }
+}
+@media (max-width: 1200px) {
+  .banner_left {
+    left: 600px;
   }
 }
 @media (max-width: 1100px) {
@@ -559,4 +672,66 @@ footer .p18 {
 footer .p18 p {
   padding: 0px;
   margin: auto 0;
+}
+
+.games {
+  background-image: url(../images/advgamesfoneR.png);
+  background-size: 105%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  margin-top: 60px;
+}
+.games .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.games .container .game_element {
+  width: 255px;
+}
+.games .container .game_element object {
+  width: 100%;
+}
+.games .container .game_element .img {
+  width: 0px;
+  height: 0px;
+  position: relative;
+  top: 12px;
+  left: 11px;
+}
+.games .container .game_element .img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 233px;
+  height: 325px;
+  border-radius: 10px;
+}
+.games .container .game_element button {
+  position: relative;
+  top: -110px;
+  width: 100%;
+  margin: 0 auto;
+}
+.games .container .game_element button object {
+  width: 150px;
+}
+.games .container .adv_image {
+  margin: auto;
+}
+@media (max-width: 600px) {
+  .games .container .adv_image {
+    width: 400px;
+  }
+}
+@media (max-width: 450px) {
+  .games .container .adv_image {
+    width: 300px;
+  }
+}
+@media (max-width: 360px) {
+  .games .container .adv_image {
+    width: 260px;
+  }
 }
