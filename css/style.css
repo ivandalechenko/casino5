@@ -67,7 +67,7 @@ nav .enter_form_wrapper {
   position: relative;
   left: 55%;
   top: 20px;
-  z-index: 2;
+  z-index: 3;
 }
 @media (max-width: 1100px) {
   nav .enter_form_wrapper {
@@ -715,8 +715,8 @@ footer .p18 p {
   width: 100%;
   margin: 0 auto;
 }
-.games .container .game_element button object {
-  width: 150px;
+.games .container .game_element button svg {
+  width: 180px;
 }
 .games .container .adv_image {
   margin: auto;
@@ -864,6 +864,11 @@ footer .p18 p {
             backdrop-filter: blur(2px);
   }
 }
+@media (max-width: 400px) {
+  .reg form button {
+    padding: 5px 40px;
+  }
+}
 .reg form button:hover {
   cursor: pointer;
   background-color: white;
@@ -885,4 +890,349 @@ footer .p18 p {
   .girl {
     left: -200px;
   }
+}
+
+.planet {
+  width: 0px;
+  height: 0px;
+  animation: 9s ease-in-out 0s infinite alternate planet;
+  position: relative;
+  filter: drop-shadow(0px 0px 5px rgba(104, 83, 178, 0.5));
+  left: 50px;
+  top: -10px;
+}
+@media (max-width: 1200px) {
+  .planet {
+    display: none;
+  }
+}
+
+@keyframes planet {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+.circle {
+  width: 0px;
+  height: 0px;
+  animation: 6s ease-in-out 0s infinite alternate circle;
+  position: relative;
+  filter: drop-shadow(0px 0px 5px rgba(104, 83, 178, 0.5));
+  left: 30px;
+  top: -10px;
+}
+@media (max-width: 1200px) {
+  .circle {
+    display: none;
+  }
+}
+
+@keyframes circle {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(70px);
+  }
+}
+.left_play_element {
+  width: 0px;
+  height: 0px;
+  animation: 12s ease-in-out 0s infinite alternate left_play_element;
+  position: relative;
+  filter: drop-shadow(0px 0px 5px rgba(104, 83, 178, 0.5));
+  left: 30px;
+  top: 190px;
+  z-index: -2;
+}
+@media (max-width: 1200px) {
+  .left_play_element {
+    display: none;
+  }
+}
+
+@keyframes left_play_element {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
+.cube_1 {
+  width: 0px;
+  height: 0px;
+  animation: 10s ease-in-out 0s infinite alternate cube_1;
+  position: relative;
+  left: 0px;
+  filter: drop-shadow(0px 0px 5px rgba(104, 83, 178, 0.5));
+  top: 280px;
+  z-index: -2;
+}
+@media (max-width: 1200px) {
+  .cube_1 {
+    display: none;
+  }
+}
+
+@keyframes cube_1 {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+.cube_2 {
+  width: 0px;
+  height: 0px;
+  animation: 7s ease-in-out 0s infinite alternate cube_2;
+  position: relative;
+  left: 300px;
+  filter: drop-shadow(0px 0px 5px rgba(104, 83, 178, 0.5));
+  top: 240px;
+  z-index: 2;
+}
+@media (max-width: 1300px) {
+  .cube_2 {
+    display: none;
+  }
+}
+
+@keyframes cube_2 {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(70px);
+  }
+}
+.star_1 {
+  width: 0px;
+  height: 0px;
+  animation: 4s ease-in-out 0s infinite alternate star_1;
+  position: relative;
+  left: 300px;
+  top: 20px;
+  filter: drop-shadow(0px 0px 5px rgba(104, 83, 178, 0.5));
+  z-index: 2;
+}
+@media (max-width: 1250px) {
+  .star_1 {
+    display: none;
+  }
+}
+
+@keyframes star_1 {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(40px);
+  }
+}
+.star_2 {
+  width: 0px;
+  height: 0px;
+  animation: 5s ease-in-out 0s infinite alternate star_2;
+  position: relative;
+  left: 450px;
+  top: 300px;
+  filter: drop-shadow(0px 0px 5px rgba(104, 83, 178, 0.5));
+  z-index: 2;
+}
+@media (max-width: 1600px) {
+  .star_2 {
+    display: none;
+  }
+}
+
+@keyframes star_2 {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-40px);
+  }
+}
+.cube_3 {
+  width: 0px;
+  height: 0px;
+  animation: 14s ease-in-out 0s infinite alternate cube_3;
+  position: relative;
+  left: 350px;
+  top: 10px;
+  filter: drop-shadow(0px 0px 5px rgba(104, 83, 178, 0.5));
+  z-index: 2;
+}
+@media (max-width: 1450px) {
+  .cube_3 {
+    display: none;
+  }
+}
+
+@keyframes cube_3 {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+.cube_4 {
+  width: 0px;
+  height: 0px;
+  animation: 9s ease-in-out 0s infinite alternate cube_4;
+  position: relative;
+  left: 700px;
+  top: -70px;
+  z-index: 2;
+  filter: drop-shadow(0px 0px 5px rgba(104, 83, 178, 0.5));
+}
+@media (max-width: 1020px) {
+  .cube_4 {
+    display: none;
+  }
+}
+
+@keyframes cube_4 {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+.cube_5 {
+  width: 0px;
+  height: 0px;
+  animation: 13s ease-in-out 0s infinite alternate cube_5;
+  position: relative;
+  left: 1100px;
+  top: 0px;
+  z-index: 2;
+  filter: drop-shadow(0px 0px 5px rgba(104, 83, 178, 0.5));
+}
+@media (max-width: 1190px) {
+  .cube_5 {
+    display: none;
+  }
+}
+
+@keyframes cube_5 {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(100px);
+  }
+}
+.cube_6 {
+  width: 0px;
+  height: 0px;
+  animation: 8s ease-in-out 0s infinite alternate cube_6;
+  position: relative;
+  left: 1300px;
+  top: 80px;
+  z-index: 2;
+  filter: drop-shadow(0px 0px 5px rgba(104, 83, 178, 0.5));
+}
+@media (max-width: 1380px) {
+  .cube_6 {
+    display: none;
+  }
+}
+
+@keyframes cube_6 {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+.right_play_element {
+  width: 0px;
+  height: 0px;
+  animation: 15s ease-in-out 0s infinite alternate right_play_element;
+  position: relative;
+  left: 1300px;
+  top: 100px;
+  z-index: -1;
+  filter: drop-shadow(0px 0px 5px rgba(104, 83, 178, 0.5));
+}
+@media (max-width: 1550px) {
+  .right_play_element {
+    display: none;
+  }
+}
+@media (max-width: 700px) {
+  .right_play_element {
+    display: block;
+    left: 20px;
+  }
+}
+
+@keyframes right_play_element {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(120px);
+  }
+}
+#game_popup {
+  z-index: 10;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: rgba(128, 115, 208, 0.77);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  width: 100%;
+  height: 100vh;
+  padding: 0px 15px;
+}
+#game_popup .game_popup_inner {
+  padding: 20px 50px 20px;
+  background-color: rgb(128, 115, 208);
+  border-radius: 32px;
+  width: 100%;
+  max-width: 850px;
+  margin: auto;
+  margin-top: 10vh;
+  height: 70vh;
+}
+@media (max-width: 550px) {
+  #game_popup .game_popup_inner {
+    padding: 20px 20px 20px;
+  }
+}
+#game_popup img {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  transition: 0.3s;
+}
+#game_popup img:hover {
+  cursor: pointer;
+  opacity: 50%;
+  transition: 0.3s;
+}
+#game_popup #game_name {
+  font-family: "Rajdhani";
+  font-size: 24px;
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+}
+#game_popup iframe {
+  margin-top: 20px;
+  width: 100%;
+  height: 57vh;
 }
